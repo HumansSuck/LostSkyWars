@@ -1,0 +1,51 @@
+# Actions:
+# NOTHING
+# OPEN:kitsnormal
+# OPEN:kitsinsane
+# OPEN:kitsranked
+# OPEN:perksnormal
+# OPEN:perksinsane
+# OPEN:perksranked
+# OPEN:soulwell
+# OPEN:shop
+# SENDMESSAGE:&aHi
+# PERFORMCOMMAND:/command
+title: 'Kits & Perks'
+rows: 6
+items:
+ kitsnormal:
+  slot: 11
+  action: 'OPEN:kitsnormal'
+  stack: 'STONE_SWORD : 1 : display=&aNormal Kits : lore=&7Selection of unique kits\n&7for Normal games.\n \n&eClick to browse!'
+ kitsinsane:
+  slot: 13
+  action: 'OPEN:kitsinsane'
+  stack: 'IRON_SWORD : 1 : display=&aInsane Kits  : lore=&7Selection of unique kits\n&7for Insane games.\n \n&eClick to browse!'
+ kitsranked:
+  slot: 15
+  action: 'OPEN:kitsranked'
+  stack: 'GOLD_SWORD : 1 : display=&aRanked Kits  : lore=&7Selection of unique kits\n&7for Ranked Mode.\n \n&eClick to browse!'
+ perksnormal:
+  slot: 20
+  action: 'OPEN:perksnormal'
+  stack: 'BREWING_STAND_ITEM : 1 : display=&aNormal Perks : lore=&7Selection of unique perks\n&7for Normal games.\n \n&eClick to browse!'
+ perksinsane:
+  slot: 22
+  action: 'OPEN:perksinsane'
+  stack: 'CAULDRON_ITEM : 1 : display=&aInsane Perks  : lore=&7Selection of unique perks\n&7for Insane games.\n \n&eClick to browse!'
+ perksranked:
+  slot: 24
+  action: 'OPEN:perksranked'
+  stack: 'WORKBENCH : 1 : display=&aRanked Perks  : lore=&7Selection of unique perks\n&7for Ranked Mode.\n \n&eClick to browse!'
+ back:
+  slot: 48
+  action: 'OPEN:shop'
+  stack: 'ARROW : 1 : display=&aGo Back : lore=&7To SkyWars Shop'
+ coins:
+  slot: 49
+  action: 'NOTHING'
+  stack: 'EMERALD : 1 : display=&7Total Coins: &6{coins} : lore=&6http://store.example.net'
+ soulwell:
+  slot: 50
+  action: 'OPEN:soulwell'
+  stack: 'ENDER_PORTAL_FRAME : 1 : display=&bSoul Well : lore=&7Use &bSouls &7to roll the\n&7well and win kits & perks!\n \n&7Earn &bSouls &7by killing\n&7players in SkyWars.\n \n&7Souls: &b{souls}\n \n&eClick to roll!'

@@ -1,0 +1,92 @@
+arrowrecovery:
+ # WARNING!!!
+ # Unique ID. DON'T USE THE SAME ID FOR OTHERS PERKS
+ id: 1
+ name: 'Arrow Recovery'
+ price: 50000
+ rarity: RARE
+ permission: 'none'
+ icon: 'ARROW : 1 : display=Arrow Recovery : lore=&7{percentage} chance of getting your\n&7arrow back on bow hit.'
+ # Chance
+ percentage: 15
+ ranked: true
+blazingarrow:
+ id: 2
+ name: 'Blazing Arrows'
+ price: 50000
+ rarity: RARE
+ permission: 'none'
+ icon: 'BLAZE_POWDER : 1 : display=Blazing Arrows : lore=&7{percentage} chance of shooting a\n&7fire arrow with a bow.'
+ percentage: 10
+ ranked: true
+bulldozer:
+ id: 3
+ name: 'Bulldozer'
+ price: 150000
+ rarity: LEGENDARY
+ permission: 'none'
+ icon: 'ANVIL : 1 : display=Bulldozer : lore=&7Enemy kills give you\n&7strength I for {time}s.'
+ time: 5
+ ranked: true
+endermastery:
+ id: 4
+ name: 'Ender Mastery'
+ price: 20000
+ rarity: COMMON
+ permission: 'none'
+ icon: 'ENDER_PEARL : 1 : display=Ender Mastery : lore=&7Reduces damage taken with\n&7enderpearls by {percentage}'
+ percentage: 50
+ ranked: true
+juggernaut:
+ id: 5
+ name: 'Juggernaut'
+ price: 50000
+ rarity: RARE
+ permission: 'none'
+ icon: 'DIAMOND_HELMET : 1 : display=Juggernaut : lore=&7Enemy kills give you regen\n&7I for {time}s.'
+ time: 5
+ ranked: true
+knowledge:
+ id: 6
+ name: 'Knowledge'
+ price: 5000
+ rarity: COMMON
+ permission: 'none'
+ icon: 'BOOK : 1 : display=Knowledge : lore=&7Every kill you gain {level} EXP\n&7Level.'
+ level: 1
+ ranked: true
+nourishment:
+ id: 7
+ name: 'Nourishment'
+ price: 5000
+ rarity: COMMON
+ permission: 'none'
+ icon: 'BREAD : 1 : display=Nourishment : lore=&7Every kill gives you full\n&7hunger and saturation.'
+ ranked: true
+luckycharm:
+ id: 8
+ name: 'Lucky Charm'
+ price: 5000
+ rarity: COMMON
+ permission: 'none'
+ icon: 'SPECKLED_MELON : 1 : display=Lucky Charm : lore=&7{percentage} chance to get a Golden\n&7Apple after a kill.'
+ percentage: 5
+ ranked: true
+voidmaster:
+ id: 9
+ name: 'Void Master'
+ price: 150000
+ rarity: LEGENDARY
+ permission: 'none'
+ icon: 'CAULDRON_ITEM : 1 : display=Void Master : lore=&7{percentage} chance to get an\n&7enderpearl after throwing a\n&7player in the void.'
+ percentage: 10
+ ranked: true
+decisivestrike:
+ id: 10
+ name: 'Decisive Strike'
+ price: 150000
+ rarity: LEGENDARY
+ permission: 'none'
+ icon: 'GOLDEN_APPLE : 1 : display=Decisive Strike : lore=&7{percentage} chance to when you''re about\n&7to die got 0,5 hearts instead\n&7of dying.'
+ percentage: 10
+ ranked: true

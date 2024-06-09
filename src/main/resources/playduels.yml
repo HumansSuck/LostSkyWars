@@ -1,0 +1,22 @@
+# Actions:
+# NOTHING
+# OPEN:playsolo
+# OPEN:playdoubles
+# OPEN:closeinv
+# SENDMESSAGE:&aHi
+# PERFORMCOMMAND:/command
+title: 'Play Duels'
+rows: 4
+items:
+ playsolo:
+  slot: 12
+  action: 'OPEN:playsolo'
+  stack: 'EYE_OF_ENDER : 1 : display=&aPlay SkyWars Duel : lore=&7Click to play SkyWars Duel!\n \n&8This Duels mode will\n&8not count towards SkyWars\n&8stats.\n \n&eClick to play!\n&7{players_solo} currently playing'
+ playdoubles:
+  slot: 14
+  action: 'OPEN:playdoubles'
+  stack: 'EYE_OF_ENDER : 2 : display=&aPlay SkyWars Doubles : lore=&7Click to play SkyWars\n&7Doubles!\n \n&8This Duels mode will\n&8not count towards SkyWars\n&8stats.\n \n&eClick to play!\n&7{players_doubles} currently playing'
+ close:
+  slot: 31
+  action: 'OPEN:closeinv'
+  stack: 'BARRIER : 1 : display=&cClose'

@@ -1,0 +1,8 @@
+lostskywars.lobby.fly - Fly in lobby
+lostskywars.chat.delay - Bypass delay to text on chat.
+lostskywars.chat.color - Use colors on chat.
+lostskywars.mapselector.infinite - Infinite map selector attempts.
+
+lostskywars.cmd.skywars - Use /lsw (All Commands)
+lostskywars.cmd.stats - Use /stats <username>
+lostskywars.cmd.watch - Use /watch <username>

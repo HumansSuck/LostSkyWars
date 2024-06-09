@@ -1,0 +1,23 @@
+leagues:
+ 3:
+  name: '&6Champion League'
+  # Points lost when the game starts
+  fare: 80
+  points: 6000
+ 2:
+  name: '&bContender League'
+  fare: 40
+  points: 2000
+ 1:
+  name: '&8Open League'
+  fare: 20
+  points: 0
+rewards:
+ points:
+  solo:
+   per-win: 60
+   per-kill: 20
+  doubles:
+   per-win: 60
+   # For each team member
+   per-kill: 10

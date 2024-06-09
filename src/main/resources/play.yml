@@ -1,0 +1,32 @@
+# Actions:
+# NOTHING
+# OPEN:playnormal
+# OPEN:mapsnormal
+# OPEN:playinsane
+# OPEN:mapsinsane
+# OPEN:closeinv
+# SENDMESSAGE:&aHi
+# PERFORMCOMMAND:/command
+title: 'Play Skywars'
+rows: 4
+items:
+ playnormal:
+  slot: 11
+  action: 'OPEN:playnormal'
+  stack: 'ENDER_PEARL : 1 : display=&aSkyWars ({mode} Normal) : lore=&7Play {mode} Normal SkyWars!\n \n&7{players_normal} currently playing\n&eClick to play!'
+ mapsinsane:
+  slot: 12
+  action: 'OPEN:mapsnormal'
+  stack: 'SIGN : 1 : display=&aMap Selector ({mode} Normal) : lore=&7Pick wich map you want to play\n&7from a list of avaible servers.\n \n&eClick to browse!'
+ playinsane:
+  slot: 14
+  action: 'OPEN:playinsane'
+  stack: 'EYE_OF_ENDER : 1 : display=&aSkyWars ({mode} Insane) : lore=&7Play {mode} Insane SkyWars!\n \n&7{players_insane} currently playing\n&eClick to play!'
+ mapsnormal:
+  slot: 15
+  action: 'OPEN:mapsinsane'
+  stack: 'SIGN : 1 : display=&aMap Selector ({mode} Insane) : lore=&7Pick wich map you want to play\n&7from a list of available servers.\n \n&eClick to browse!'
+ close:
+  slot: 31
+  action: 'OPEN:closeinv'
+  stack: 'BARRIER : 1 : display=&cClose'

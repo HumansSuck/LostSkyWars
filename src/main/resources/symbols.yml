@@ -1,0 +1,157 @@
+# ⋆ - Default
+# ★ - Angel of Death I
+# ☆ - Angel of Death II
+# ☸ - Angel of Death III 
+# ✶ - Angel of Death IV
+# ✳ - Angel of Death V
+# ✴ - Angel of Death VI
+# ✷ - Angel of Death VII
+# ❋ - Angel of Death VIII
+# ✼ - Angel of Death IX
+# ❂ - Angel of Death X
+# ❁ - Angel of Death XI
+# I don't have found that - Angel of Death XII
+# ✙ - Iron Prestige
+# ❤ - Gold Prestige
+# ☠ - Diamond Prestige
+# ✦ - Emerald Prestige
+# ✌ - Sapphire Prestige
+# ❦ - Ruby Prestige
+# ✵ - Crystal Prestige
+# ❣ - Opal Prestige
+# ☯ - Amethyst Prestige
+# ✺ - Rainbow Prestige
+default:
+ # WARNING!!!
+ # Unique ID. DON'T USE THE SAME ID FOR OTHERS SYMBOLS
+ id: 0
+ name: 'Default'
+ level: 0
+ symbol: '⋆'
+ icon: 'PAPER : 1 : display=Default : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelI:
+ id: 1
+ name: 'Angel of Death I'
+ level: 30
+ symbol: '★'
+ icon: 'SKULL_ITEM:1 : 1 : display=Angel of Death I : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelII:
+ id: 2
+ name: 'Angel of Death II'
+ level: 35
+ symbol: '☆'
+ icon: 'SKULL_ITEM:1 : 2 : display=Angel of Death II : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelIII:
+ id: 3
+ name: 'Angel of Death III'
+ level: 40
+ symbol: '☸'
+ icon: 'SKULL_ITEM:1 : 3 : display=Angel of Death III : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelIV:
+ id: 4
+ name: 'Angel of Death IV'
+ level: 45
+ symbol: '✶'
+ icon: 'SKULL_ITEM:1 : 4 : display=Angel of Death IV : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelV:
+ id: 5
+ name: 'Angel of Death V'
+ level: 50
+ symbol: '✳'
+ icon: 'SKULL_ITEM:1 : 5 : display=Angel of Death V : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelVI:
+ id: 6
+ name: 'Angel of Death VI'
+ level: 55
+ symbol: '✴'
+ icon: 'SKULL_ITEM:1 : 6 : display=Angel of Death VI : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelVII:
+ id: 7
+ name: 'Angel of Death VII'
+ level: 60
+ symbol: '✷'
+ icon: 'SKULL_ITEM:1 : 7 : display=Angel of Death VII : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelVIII:
+ id: 8
+ name: 'Angel of Death VIII'
+ level: 65
+ symbol: '❋'
+ icon: 'SKULL_ITEM:1 : 8 : display=Angel of Death VIII : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelIX:
+ id: 9
+ name: 'Angel of Death IX'
+ level: 70
+ symbol: '✼'
+ icon: 'SKULL_ITEM:1 : 9 : display=Angel of Death IX : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelX:
+ id: 10
+ name: 'Angel of Death X'
+ level: 75
+ symbol: '❂'
+ icon: 'SKULL_ITEM:1 : 10 : display=Angel of Death X : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+angelXI:
+ id: 11
+ name: 'Angel of Death XI'
+ level: 80
+ symbol: '❁'
+ icon: 'SKULL_ITEM:1 : 11 : display=Angel of Death XI : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+iron:
+ id: 12
+ name: 'Iron Prestige'
+ level: 2
+ symbol: '✙'
+ icon: 'IRON_INGOT : 1 : display=Iron Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+gold:
+ id: 13
+ name: 'Gold Prestige'
+ level: 5
+ symbol: '❤'
+ icon: 'GOLD_INGOT : 1 : display=Gold Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+diamond:
+ id: 14
+ name: 'Diamond Prestige'
+ level: 8
+ symbol: '☠'
+ icon: 'DIAMOND : 1 : display=Diamond Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+emerald:
+ id: 15
+ name: 'Emerald Prestige'
+ level: 11
+ symbol: '✦'
+ icon: 'EMERALD : 1 : display=Emerald Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+sapphire:
+ id: 16
+ name: 'Sapphire Prestige'
+ level: 14
+ symbol: '✌'
+ icon: 'SKULL_ITEM:3 : 1 : display=Sapphire Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7. : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThjNTExYjk2MWIyZGNhMDEyZjNhNWY1YjQ2NjA3OGEwZWMyMzgwYTc2ZDUxOWVhMzY0YTdkNmRjMjhlMWJiIn19fQ=='
+ruby:
+ id: 17
+ name: 'Ruby Prestige'
+ level: 17
+ symbol: '❦'
+ icon: 'SKULL_ITEM:3 : 1 : display=Ruby Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7. : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjUzMDE5MTUwMGMyNDUzNjI0ZGQ5MzdlYzEyNWQ0NGYwOTQyY2MyYjY2NDA3M2UyYTM2NmIzZmE2N2EwYzg5NyJ9fX0='
+crystal:
+ id: 18
+ name: 'Crystal Prestige'
+ level: 20
+ symbol: '✵'
+ icon: 'QUARTZ : 1 : display=Crystal Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7.'
+opal:
+ id: 19
+ name: 'Opal Prestige'
+ level: 23
+ symbol: '❣'
+ icon: 'SKULL_ITEM:3 : 1 : display=Opal Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7. : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI1NWE3ODUxYjQ3ODYxOTJhNDFmODhkYzJkMjhkNGU5Yjc3MjNiMDZlNWNlMmY2YTQxOGJkZTYxMzI2YmMxMiJ9fX0='
+amethyst:
+ id: 20
+ name: 'Amethyst Prestige'
+ level: 26
+ symbol: '☯'
+ icon: 'SKULL_ITEM:3 : 1 : display=Amethyst Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7. : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTc5ZjhjOTI3NzZkNjQyZDExOWY5ZTkyMzYwYjFlNWI5NzFlNjZlNjE0MjhhM2UxYjMxMWQ4YjYxODVlNiJ9fX0='
+rainbow:
+ id: 21
+ name: 'Rainbow Prestige'
+ level: 30
+ symbol: '✺'
+ icon: 'SKULL_ITEM:3 : 1 : display=Rainbow Prestige : lore=&7Sets your current Prestige Icon\n&7to &f{symbol}&7. : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjdiNzQ3YjM3OGE0MWEwYTZlZGM4NmMwMDBmMDQwYzY5OTRhODMzMjUxMTk2YzlkNTJjMmEyMzBmOTUxNjBjYyJ9fX0='

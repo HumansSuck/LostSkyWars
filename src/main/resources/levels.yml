@@ -1,0 +1,43 @@
+# Rewards:
+# COINS:<amount>
+# SOULS:<amount>
+# MYSTERY_BOX:<amount>
+# MYSTERY_DUST:<amount>
+# COMMAND:<command without "/"> - {player} = Player Name
+levels:
+ 1:
+  exp: 0
+  reward: 'COINS:1500'
+  description: ' \n&8+&61,500 &7SkyWars Coins'
+ 2:
+  exp: 250
+  reward: 'MYSTERY_BOX:1'
+  description: ' \n&8+&71 &bMystery Box'
+ 3:
+  exp: 500
+  reward: 'MYSTERY_DUST:5'
+  description: ' \n&8+&b5 Mystery Dust'
+ 4:
+  exp: 750
+  reward: 'COINS:1750'
+  description: ' \n&8+&61,750 &7SkyWars Coins'
+ 5:
+  exp: 1000
+  reward: 'SOULS:20'
+  description: ' \n&8+&720 &bSouls'
+ 6:
+  exp: 1250
+  reward: 'COINS:2000'
+  description: ' \n&8+&62,000 &7SkyWars Coins'
+ 7:
+  exp: 1500
+  reward: 'MYSTERY_BOX:1'
+  description: ' \n&8+&71 &bMystery Box'
+ 8:
+  exp: 1750
+  reward: 'MYSTERY_DUST:5'
+  description: ' \n&8+&b5 Mystery Dust'
+ 9:
+  exp: 2000
+  reward: 'COINS:2250'
+  description: ' \n&8+&62,250 &7SkyWars Coins'

@@ -1,0 +1,28 @@
+# Actions:
+# NOTHING
+# OPEN:closeinv
+# SENDMESSAGE:&aHi
+# PERFORMCOMMAND:/command
+title: 'SkyWars Statistics'
+rows: 5
+items:
+ allmodes:
+  slot: 4
+  action: 'NOTHING'
+  stack: 'PAPER : 1 : display=&aAll Mode Statistics : lore=&7Wins: &a{wins}\n&7Losses: &a{losses}\n \n&7Kills: &a{kills}\n&7Assists: &a{assists}\n&7Deaths: &a{deaths}\n \n&7Melee Kills: &a{melee}\n&7Bow Kills: &a{bow}\n&7Void Kills: &a{void}'
+ solo:
+  slot: 20
+  action: 'NOTHING'
+  stack: 'PAPER : 1 : display=&aSolo Statistics : lore=&7Wins: &a{solowins}\n&7Losses: &a{sololosses}\n \n&7Kills: &a{solokills}\n&7Assists: &a{soloassists}\n&7Deaths: &a{solodeaths}\n \n&7Melee Kills: &a{solomelee}\n&7Bow Kills: &a{solobow}\n&7Void Kills: &a{solovoid}'
+ doubles:
+  slot: 22
+  action: 'NOTHING'
+  stack: 'PAPER : 1 : display=&aDoubles Statistics : lore=&7Wins: &a{teamwins}\n&7Losses: &a{teamlosses}\n \n&7Kills: &a{teamkills}\n&7Assists: &a{teamassists}\n&7Deaths: &a{teamdeaths}\n \n&7Melee Kills: &a{teammelee}\n&7Bow Kills: &a{teambow}\n&7Void Kills: &a{teamvoid}'
+ ranked:
+  slot: 24
+  action: 'NOTHING'
+  stack: 'PAPER : 1 : display=&aRanked Statistics : lore=&7Wins: &a{rankedwins}\n&7Losses: &a{rankedlosses}\n \n&7Kills: &a{rankedkills}\n&7Assists: &a{rankedassists}\n&7Deaths: &a{rankeddeaths}\n \n&7Melee Kills: &a{rankedmelee}\n&7Bow Kills: &a{rankedbow}\n&7Void Kills: &a{rankedvoid}'
+ close:
+  slot: 40
+  action: 'OPEN:closeinv'
+  stack: 'BARRIER : 1 : display=&cClose'

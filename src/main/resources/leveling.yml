@@ -1,0 +1,28 @@
+# Actions:
+# NOTHING
+# OPEN:profile
+# SENDMESSAGE:&aHi
+# PERFORMCOMMAND:/command
+title: 'SkyWars Leveling'
+rows: 6
+items:
+ back:
+  slot: 48
+  action: 'OPEN:profile'
+  stack: 'ARROW : 1 : display=&aGo Back : lore=&7To My Profile'
+ leveling:
+  slot: 49
+  action: 'NOTHING'
+  stack: 'BREWING_STAND_ITEM : 1 : display=&aSkyWars Leveling : lore=&7Playing games and completing quests\n&7will reward you with &3SkyWars Experience&7,\n&7which is required to level up and\n&7acquire new perks and rewards!\n \n&3SkyWars Level &a{level} {level_progress} &3{level_percentage}\n \n&7Experience until next level: &3{until}\n \n&eClick to see your rewards!'
+extras:
+ previous-slot: 18
+ next-slot: 26
+ previous-page: 'ARROW : 1 : display=&aPage {page}'
+ next-page: 'ARROW : 1 : display=&aPage {page}'
+ rewards-slots: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 25]
+ claimed: 'MINECART : 1 : display=&cSkyWars Level Reward {level} : lore={description}\n \n&aYou have already claimed this reward!'
+ locked: 'STORAGE_MINECART : 1 : display=&cSkyWars Level Reward {level} : lore={description}\n \n&cYou can''t claim this yet!'
+ unlocked: 'STORAGE_MINECART : 1 : display=&aSkyWars Level Reward {level} : lore={description}\n \n&eClick to claim!'
+ locked-warn: '&cYou can''t claim that reward!'
+ claimed-warn: '&cYou''ve already claimed that reward!'
+ claim-warn: '&aYou''ve claimed SkyWars Level Reward {level}!'

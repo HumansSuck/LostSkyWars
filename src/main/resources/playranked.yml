@@ -1,0 +1,36 @@
+# Actions:
+# NOTHING
+# OPEN:playsolo
+# OPEN:mapssolo
+# OPEN:playdoubles
+# OPEN:mapsdoubles
+# OPEN:closeinv
+# SENDMESSAGE:&aHi
+# PERFORMCOMMAND:/command
+title: 'Play Skywars Ranked'
+rows: 4
+items:
+ playnormal:
+  slot: 11
+  action: 'OPEN:playsolo'
+  stack: 'ENDER_PEARL : 1 : display=&aSkyWars (Solo Ranked) : lore=&7Play Solo Ranked SkyWars!\n \n&7{players_solo} currently playing\n&eClick to play!'
+ mapsinsane:
+  slot: 12
+  action: 'OPEN:mapssolo'
+  stack: 'SIGN : 1 : display=&aMap Selector (Solo Ranked) : lore=&7Pick wich map you want to play\n&7from a list of avaible servers.\n \n&eClick to browse!'
+ playinsane:
+  slot: 14
+  action: 'OPEN:playdoubles'
+  stack: 'EYE_OF_ENDER : 1 : display=&aSkyWars (Doubles Ranked) : lore=&7Play Doubles Ranked SkyWars!\n \n&7{players_doubles} currently playing\n&eClick to play!'
+ mapsnormal:
+  slot: 15
+  action: 'OPEN:mapsdoubles'
+  stack: 'SIGN : 1 : display=&aMap Selector (Doubles Ranked) : lore=&7Pick wich map you want to play\n&7from a list of avaible servers.\n \n&eClick to browse!'
+ info:
+  slot: 30
+  action: 'NOTHING'
+  stack: 'BOOK : 1 : display=&aRanked Information : lore=&fYour Points: &6{points}\n&fCurrent League: {league}\n \n&eClick to see more information!'
+ close:
+  slot: 31
+  action: 'OPEN:closeinv'
+  stack: 'BARRIER : 1 : display=&cClose'

@@ -1,0 +1,26 @@
+# Actions:
+# NOTHING
+# OPEN:statistics
+# OPEN:settings
+# OPEN:leveling
+# SENDMESSAGE:&aHi
+# PERFORMCOMMAND:/command
+title: 'My Profile'
+rows: 4
+items:
+ settings:
+  slot: 12
+  action: 'OPEN:settings'
+  stack: 'REDSTONE_COMPARATOR : 1 : display=&aSettings & Visibility : lore=&7Allows you to edit and control\n&7various personal settings.\n \n&eClick to edit your settings!'
+ player:
+  slot: 13
+  action: 'SENDMESSAGE:&aWebstore &bhttps://store.example.net/'
+  stack: 'SKULL_ITEM:3 : 1 : display=&aCharacter Information : lore=&7Rank: {rank}\n&7Level: &6{level}\n&7Experience until next level: &6{until}\n&7Mystery Dust: &b{dusts}\n \n&eClick to see the Store link.'
+ statistics:
+  slot: 14
+  action: 'OPEN:statistics'
+  stack: 'PAPER : 1 : display=&aStats Viewer : lore=&7Showcases your stats for each\n&7game and an overview of all.\n \n&7Players ranked &bMVP &7or higher\n&7can use &b/stats (username) &7to view\n&7other player''s stats.\n \n&eClick to view stats!'
+ leveling:
+  slot: 22
+  action: 'OPEN:leveling'
+  stack: 'BREWING_STAND_ITEM : 1 : display=&aSkyWars Leveling : lore=&7Playing games and completing quests\n&7will reward you with &3SkyWars Experience&7,\n&7which is required to level up and\n&7acquire new perks and rewards!\n \n&3SkyWars Level &a{level} {level_progress} &3{level_percentage}\n \n&7Experience until next level: &3{until}\n \n&eClick to see your rewards!'

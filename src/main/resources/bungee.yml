@@ -1,0 +1,5 @@
+author: lostedd
+name: LostSkyWars
+version: 2.4.21
+
+main: tk.kanaostore.losteddev.skywars.bungee.Bungee

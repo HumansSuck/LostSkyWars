@@ -1,0 +1,112 @@
+bat:
+ # WARNING!!!
+ # Unique ID. DON'T USE THE SAME ID FOR OTHERS CRIES
+ id: 1
+ name: 'Bat'
+ price: 5000
+ rarity: COMMON
+ buyable: true
+ sound: BAT_DEATH
+ volume: 1.0
+ pitch: 1.0
+ icon: 'SKULL_ITEM:3 : 1 : display=Bat : lore=&8Death Cry\n \n&7Plays the Bat Death Cry\n&7when you die.\n \n&eRight-Click to preview!\n  : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjc2NjE5NjUyZmFmZWM5MGNlOThkZjUwMTNjNjNkYzZhNzc3NzZhYjI3ODczYjczZGFmYjJiNmJkZWIxODUifX19'
+enderman:
+ id: 2
+ price: 5000
+ name: 'Enderman'
+ rarity: COMMON
+ buyable: true
+ sound: ENDERMAN_DEATH
+ volume: 1.0
+ pitch: 1.0
+ icon: 'SKULL_ITEM:3 : 1 : display=Enderman : lore=&8Death Cry\n \n&7Plays the Enderman Death Cry\n&7when you die.\n \n&eRight-Click to preview!\n  : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2E1OWJiMGE3YTMyOTY1YjNkOTBkOGVhZmE4OTlkMTgzNWY0MjQ1MDllYWRkNGU2YjcwOWFkYTUwYjljZiJ9fX0='
+pig:
+ id: 3
+ name: 'Pig'
+ price: 5000
+ rarity: COMMON
+ buyable: true
+ sound: PIG_DEATH
+ volume: 1.0
+ pitch: 1.0
+ icon: 'SKULL_ITEM:3 : 1 : display=Pig : lore=&8Death Cry\n \n&7Plays the Pig Death Cry\n&7when you die.\n \n&eRight-Click to preview!\n  : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjIxNjY4ZWY3Y2I3OWRkOWMyMmNlM2QxZjNmNGNiNmUyNTU5ODkzYjZkZjRhNDY5NTE0ZTY2N2MxNmFhNCJ9fX0='
+sadpuppy:
+ id: 4
+ name: 'Sad Puppy'
+ price: 5000
+ rarity: COMMON
+ buyable: true
+ sound: WOLF_DEATH
+ volume: 1.0
+ pitch: 0.5
+ icon: 'SKULL_ITEM:3 : 1 : display=Sad Puppy : lore=&8Death Cry\n \n&7Plays the Sad Puppy Death\n&7Cry when you die.\n \n&eRight-Click to preview!\n  : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDdiNGY4NGUxOWI1MmYzMTIxNzcxMmU3YmE5ZjUxZDU2ZGE1OWQyNDQ1YjRkN2YzOWVmNmMzMjNiODE2NiJ9fX0='
+fireball:
+ id: 5
+ name: 'Fireball'
+ price: 5000
+ rarity: COMMON
+ buyable: true
+ sound: GHAST_FIREBALL
+ volume: 1.0
+ pitch: 1.0
+ icon: 'FIREBALL : 1 : display=Fireball : lore=&8Death Cry\n \n&7Plays the Fireball Death Cry\n&7when you die.\n \n&eRight-Click to preview!\n '
+drybones:
+ id: 6
+ name: 'Dry Bones'
+ price: 5000
+ rarity: COMMON
+ buyable: true
+ sound: SKELETON_DEATH
+ volume: 1.0
+ pitch: 1.0
+ icon: 'SKULL_ITEM:3 : 1 : display=Dry Bones : lore=&8Death Cry\n \n&7Plays the Dry Bones Death\n&7Cry when you die.\n \n&eRight-Click to preview!\n  : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWE2MzE0ZWFjMzQ0MTZjZTEwYWIyMmMyZTFjNGRjYjQ3MmEzZmViOThkNGUwNGQzZmJiYjg1YTlhNDcxYjE4In19fQ=='
+burp:
+ id: 7
+ name: 'Burp'
+ price: 15000
+ rarity: RARE
+ buyable: true
+ sound: BURP
+ volume: 1.0
+ pitch: 1.0
+ icon: 'COOKED_BEEF : 1 : display=Burp : lore=&8Death Cry\n \n&7Plays the Burp Death Cry\n&7when you die.\n \n&eRight-Click to preview!\n '
+aww:
+ id: 8
+ name: 'Aww'
+ price: 25000
+ rarity: EPIC
+ buyable: true
+ sound: WOLF_WHINE
+ volume: 1.0
+ pitch: 1.0
+ icon: 'SKULL_ITEM:3 : 1 : display=Aww : lore=&8Death Cry\n \n&7Plays the Aww Death Cry\n&7when you die.\n \n&eRight-Click to preview!\n  : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDhjZGQ0ZjI4NTYzMmMyNWQ3NjJlY2UyNWY0MTkzYjk2NmMyNjQxYjE1ZDliZGJjMGExMTMwMjNkZTc2YWIifX19'
+howl:
+ id: 9
+ name: 'Howl'
+ price: 30000
+ rarity: LEGENDARY
+ buyable: true
+ sound: WOLF_HOWL
+ volume: 1.0
+ pitch: 1.0
+ icon: 'SKULL_ITEM:3 : 1 : display=Howl : lore=&8Death Cry\n \n&7Plays the Howl Death Cry\n&7when you die.\n \n&eRight-Click to preview!\n  : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNjlkMWQzMTEzZWM0M2FjMjk2MWRkNTlmMjgxNzVmYjQ3MTg4NzNjNmM0NDhkZmNhODcyMjMxN2Q2NyJ9fX0='
+firework:
+ id: 10
+ name: 'Firework'
+ price: 25000
+ rarity: EPIC
+ buyable: true
+ sound: FIREWORK_LAUNCH
+ volume: 1.0
+ pitch: 1.0
+ icon: 'FIREWORK : 1 : display=Firework : lore=&8Death Cry\n \n&7Plays the Firework Death\n&7Cry when you die.\n \n&eRight-Click to preview!\n '
+rage:
+ id: 11
+ name: 'Rage'
+ price: 30000
+ rarity: LEGENDARY
+ buyable: true
+ sound: HORSE_DEATH
+ volume: 1.0
+ pitch: 0.6
+ icon: 'ROTTEN_FLESH : 1 : display=Rage : lore=&8Death Cry\n \n&7Plays the Rage Death Cry\n&7when you die.\n \n&eRight-Click to preview!\n '

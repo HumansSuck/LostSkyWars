@@ -1,0 +1,43 @@
+# Actions:
+# NOTHING
+# OPEN:kitsandperks
+# OPEN:soulwell
+# OPEN:cages
+# OPEN:deathcry
+# OPEN:balloon
+# OPEN:closeinv
+# SENDMESSAGE:&aHi
+# PERFORMCOMMAND:/command
+title: 'SkyWars Shop'
+rows: 6
+items:
+ kits:
+  slot: 10
+  action: 'OPEN:kitsandperks'
+  stack: 'EYE_OF_ENDER : 1 : display=&aKits & Perks : lore=&7Change the way you play by\n&7picking kits and perks.\n \n&7Win kits and perks in the\n&bSoul Well &7or buy them\n&7directly using &6coins&7.\n \n&eClick to browse!'
+ soulwell:
+  slot: 12
+  action: 'OPEN:soulwell'
+  stack: 'ENDER_PORTAL_FRAME : 1 : display=&bSoul Well : lore=&7Use &bSouls &7to roll the\n&7well and win kits & perks!\n \n&7Earn &bSouls &7by killing\n&7players in SkyWars.\n \n&7Souls: &b{souls}\n \n&eClick to roll!'
+ cages:
+  slot: 14
+  action: 'OPEN:cages'
+  stack: 'STAINED_GLASS:0 : 1 : display=&aCages : lore=&7Change the color of your\n&7spawning cell.\n \n&7Unlocked: &a{cages_has}/{cages_max} &8({cages_percentage})\n&7Currently Selected:\n&a{cages_current}\n \n&eClick to view!'
+ deathcries:
+  slot: 16
+  action: 'OPEN:deathcry'
+  stack: 'SKULL_ITEM:3 : 1 : display=&aDeath Cries : lore=&7Let others know just how\n&7salty your tears are every\n&7time you die with these\n&7death cries!\n \n&7Unlocked: &a{cries_has}/{cries_max} &8({cries_percentage})\n&7Currently Selected:\n&a{cries_current}\n \n&eClick to view! : skinvalue=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjM3MWU0ZTFjZjZhMWEzNmZkYWUyNzEzN2ZkOWI4NzQ4ZTYxNjkyOTk5MjVmOWFmMmJlMzAxZTU0Mjk4YzczIn19fQ=='
+ balloons:
+  slot: 30
+  action: 'OPEN:balloon'
+  stack: 'STRING : 1 : display=&aBalloons : lore=&7Attach a balloon to your\n&7spawn island!\n \n&7Unlocked: &a{balloons_has}/{balloons_max} &8({balloons_percentage})\n&7Currently Selected:\n&a{balloons_current}\n \n&eClick to view!'
+ symbols:
+  slot: 32
+  action: 'OPEN:symbols'
+  stack: 'NETHER_STAR : 1 : display=&dSkyWars Prestige Icon : lore=&7Select your Prestige Icon.\n \n&7Progress: &b{exp}&7/&a{nextExp}\n&f{level} {progressBar} &f{nextLevel}\n \n&f[{level}] {display}\n \n&eClick to view!'
+ close:
+  slot: 49
+  action: 'OPEN:closeinv'
+  stack: 'BARRIER : 1 : display=&cClose'
+extras:
+ empty: 'None'

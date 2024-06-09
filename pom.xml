@@ -1,0 +1,175 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <groupId>tk.kanaostore.losteddev.skywars</groupId>
+  <artifactId>LostSkyWars</artifactId>
+  <version>2.4.24</version>
+  
+  <name>LostSkyWars</name>
+  <description>LostSkyWars premium version.</description>
+  <inceptionYear>2019</inceptionYear>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <java.version>1.8</java.version>
+    <spigot-api.version>1.13.2-R0.1-SNAPSHOT</spigot-api.version>
+    <placeholder-api.version>2.10.4</placeholder-api.version>
+  </properties>
+  
+  <repositories>
+    <repository>
+        <id>spigot-repo</id>
+        <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+    </repository>
+    <!-- NMS Repository -->
+    <repository>
+        <id>nms-repo</id>
+        <url>https://repo.codemc.org/repository/nms/</url>
+    </repository>
+        <repository>
+            <id>placeholderapi</id>
+            <url>https://repo.extendedclip.com/content/repositories/placeholderapi/</url>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>me.clip</groupId>
+            <artifactId>placeholderapi</artifactId>
+            <version>2.11.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+  	<dependency>
+  		<groupId>org.spigotmc</groupId>
+  		<artifactId>spigot-api</artifactId>
+  		<version>${spigot-api.version}</version>
+  	</dependency>
+  	
+  	<!-- Downloader
+  	<dependency>
+  		<groupId>org.bukkit</groupId>
+  		<artifactId>craftbukkit</artifactId>
+  		<version>1.12.2-R0.1-SNAPSHOT</version>
+  	</dependency> -->
+  	
+  	
+  	<!-- 1_8_R3 -->
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit184</artifactId>
+            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${user.home}/.m2/repository/org/bukkit/craftbukkit/1.8.8-R0.1-SNAPSHOT/craftbukkit-1.8.8-R0.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <!--  1_9_R1  -->
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit191</artifactId>
+            <version>1.9.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${user.home}/.m2/repository/org/bukkit/craftbukkit/1.9.2-R0.1-SNAPSHOT/craftbukkit-1.9.2-R0.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <!--  1_10_R1  -->
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit1102</artifactId>
+            <version>1.10.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${user.home}/.m2/repository/org/bukkit/craftbukkit/1.10.2-R0.1-SNAPSHOT/craftbukkit-1.10.2-R0.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <!--  1_11_R1  -->
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit111</artifactId>
+            <version>1.11-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${user.home}/.m2/repository/org/bukkit/craftbukkit/1.11-R0.1-SNAPSHOT/craftbukkit-1.11-R0.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <!--  1_12_R1  -->
+        <dependency>
+            <groupId>org.bukkit</groupId>
+            <artifactId>craftbukkit121</artifactId>
+            <version>1.12.2-R0.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${user.home}/.m2/repository/org/bukkit/craftbukkit/1.12.2-R0.1-SNAPSHOT/craftbukkit-1.12.2-R0.1-SNAPSHOT.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>net.citizens</groupId>
+            <artifactId>citizens</artifactId>
+            <version>2.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Citizens.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.yourcompany</groupId>
+            <artifactId>lostboxes</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/LostBoxes.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.yourcompany</groupId>
+            <artifactId>lostparties</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/LostParties.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.yourcompany</groupId>
+            <artifactId>bungeecord</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/BungeeCord.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>com.yourcompany</groupId>
+            <artifactId>vault</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/libs/Vault.jar</systemPath>
+        </dependency>
+    <dependency>
+        <groupId>com.yourcompany</groupId>
+        <artifactId>protocollib</artifactId>
+        <version>1.0</version>
+        <scope>system</scope>
+        <systemPath>${project.basedir}/libs/ProtocolLib.jar</systemPath>
+    </dependency>
+
+    </dependencies>
+
+  
+  <build>
+    <defaultGoal>clean install</defaultGoal>
+    <plugins>
+      <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-compiler-plugin</artifactId>
+       <version>3.7.0</version>
+       <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+       </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          <createDependencyReducedPom>false</createDependencyReducedPom>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>install</phase>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>2.5.2</version>
+      </plugin>
+    </plugins>
+  </build>
+</project>
