@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.UUID;
+import java.util.concurrent.ThreadLocalRandom;
 import org.bukkit.Bukkit;
 import org.bukkit.Color;
 import org.bukkit.FireworkEffect;
@@ -37,8 +38,6 @@ public class BukkitUtils {
 
   private static final LostLogger LOGGER = Main.LOGGER.getModule("BukkitUtils");
 
-  // - ItemStack
-
   static {
     List<Field> fields = new ArrayList<>();
     for (Field field : Color.class.getDeclaredFields()) {
@@ -46,7 +45,6 @@ public class BukkitUtils {
         fields.add(field);
       }
     }
-
     colors = fields;
   }
 
@@ -74,7 +72,15 @@ public class BukkitUtils {
     EnchantmentStorageMeta enchantment = meta instanceof EnchantmentStorageMeta ? ((EnchantmentStorageMeta) meta) : null;
 
     if (split.length > 1) {
-      stack.setAmount(Integer.parseInt(split[1]) > 64 ? 64 : Integer.parseInt(split[1]));
+      if (split[1].contains("range=")) {
+        String rangePart = split[1].split("range=")[1];
+        String[] range = rangePart.split("-");
+        int minAmount = Integer.parseInt(range[0]);
+        int maxAmount = Integer.parseInt(range[1]);
+        stack.setAmount(ThreadLocalRandom.current().nextInt(minAmount, maxAmount + 1));
+      } else {
+        stack.setAmount(Integer.parseInt(split[1]) > 64 ? 64 : Integer.parseInt(split[1]));
+      }
     }
 
     List<String> lore = new ArrayList<>();
@@ -97,7 +103,7 @@ public class BukkitUtils {
             enchantment.addStoredEnchant(Enchantment.getByName(enchanted.split(":")[0]), Integer.parseInt(enchanted.split(":")[1]), true);
             continue;
           }
-          
+
           meta.addEnchant(Enchantment.getByName(enchanted.split(":")[0]), Integer.parseInt(enchanted.split(":")[1]), true);
         }
       }
@@ -124,7 +130,7 @@ public class BukkitUtils {
       if (opt.startsWith("owner=") && skull != null) {
         skull.setOwner(opt.split("=")[1]);
       }
-      
+
       if (opt.startsWith("skinvalue=") && skull != null) {
         try {
           GameProfile gp = new GameProfile(UUID.randomUUID(), null);
@@ -288,7 +294,7 @@ public class BukkitUtils {
 
   public static String serializeLocation(Location unserialized) {
     String serialized = unserialized.getWorld().getName() + "; " + unserialized.getX() + "; " + unserialized.getY() + "; " + unserialized.getZ() + "; " + unserialized.getYaw()
-        + "; " + unserialized.getPitch();
+            + "; " + unserialized.getPitch();
     return serialized;
   }
 

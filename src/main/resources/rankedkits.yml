@@ -1,6 +1,4 @@
 armorer:
- # WARNING!!!
- # Unique ID. DON'T USE THE SAME ID FOR MORE RANKED KITS
  id: 1
  name: 'Armorer'
  price: 20000
@@ -8,8 +6,39 @@ armorer:
  permission: 'none'
  icon: 'GOLD_CHESTPLATE : 1 : display=Armorer : lore=&7Gold Chestplate\n&7Gold Leggings\n&7Gold Boots'
  armor:
- - 'GOLD_BOOTS : 1'
- - 'GOLD_LEGGINGS : 1'
- - 'GOLD_CHESTPLATE : 1'
- - 'AIR : 1'
+  - 'GOLD_BOOTS : 1'
+  - 'GOLD_LEGGINGS : 1'
+  - 'GOLD_CHESTPLATE : 1'
+  - 'AIR : 1'
  content: []
+
+knight:
+ id: 2
+ name: 'Knight'
+ price: 25000
+ rarity: EPIC
+ permission: 'none'
+ icon: 'IRON_SWORD : 1 : display=Knight : lore=&7Iron Sword\n&7Iron Helmet'
+ armor:
+  - 'IRON_HELMET : 1'
+  - 'IRON_CHESTPLATE : 1'
+  - 'IRON_LEGGINGS : 1'
+  - 'IRON_BOOTS : 1'
+ content:
+  - 'IRON_SWORD : 1'
+
+archer:
+ id: 3
+ name: 'Archer'
+ price: 15000
+ rarity: COMMON
+ permission: 'none'
+ icon: 'BOW : 1 : display=Archer : lore=&7Bow\n&7Arrows'
+ armor:
+  - 'LEATHER_HELMET : 1'
+  - 'LEATHER_CHESTPLATE : 1'
+  - 'LEATHER_LEGGINGS : 1'
+  - 'LEATHER_BOOTS : 1'
+ content:
+  - 'BOW : 1'
+  - 'ARROW : 64'

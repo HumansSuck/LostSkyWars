@@ -1,6 +1,6 @@
-author: lostedd
+author: GoatMango
 name: LostSkyWars
-version: 2.4.24
+version: 2.4.26
 softdepend: [Vault, Citizens, LostParties, LostBoxes]
 
 main: tk.kanaostore.losteddev.skywars.Main

@@ -190,85 +190,101 @@ public class SkyWarsCage extends Cosmetic {
   public static void def(Location location, boolean big) {
     location = location.clone();
     if (big) {
-      location.add(0, -1, 0);
-      Location[] downs = {location, location.clone().add(1, 0, 0), location.clone().add(-1, 0, 0), location.clone().add(0, 0, 1), location.clone().add(0, 0, -1),
-          location.clone().add(1, 0, 1), location.clone().add(-1, 0, 1), location.clone().add(1, 0, -1), location.clone().add(-1, 0, -1)};
-      for (Location down : downs) {
+      location.add(0.0D, -1.0D, 0.0D);
+      Location[] downs = new Location[]{location, location.clone().add(1.0D, 0.0D, 0.0D), location.clone().add(-1.0D, 0.0D, 0.0D), location.clone().add(0.0D, 0.0D, 1.0D), location.clone().add(0.0D, 0.0D, -1.0D), location.clone().add(1.0D, 0.0D, 1.0D), location.clone().add(-1.0D, 0.0D, 1.0D), location.clone().add(1.0D, 0.0D, -1.0D), location.clone().add(-1.0D, 0.0D, -1.0D)};
+      Location[] var14 = downs;
+      int var5 = downs.length;
+
+      Location down;
+      int var11;
+      for(var11 = 0; var11 < var5; ++var11) {
+        down = var14[var11];
         down.getBlock().setType(Material.GLASS);
       }
-      for (int i = 1; i < 4; i++) {
-        location.add(0, 1, 0);
-        Location[] uppers = {location.clone().add(2, 0, 0), location.clone().add(-2, 0, 0), location.clone().add(0, 0, 2), location.clone().add(0, 0, -2),
-            location.clone().add(2, 0, 1), location.clone().add(2, 0, -1), location.clone().add(-2, 0, 1), location.clone().add(-2, 0, -1), location.clone().add(1, 0, 2),
-            location.clone().add(-1, 0, -2), location.clone().add(1, 0, -2), location.clone().add(-1, 0, 2)};
-        for (Location upper : uppers) {
+
+      for(int i = 1; i < 4; ++i) {
+        location.add(0.0D, 1.0D, 0.0D);
+        Location[] uppers = new Location[]{location.clone().add(2.0D, 0.0D, 0.0D), location.clone().add(-2.0D, 0.0D, 0.0D), location.clone().add(0.0D, 0.0D, 2.0D), location.clone().add(0.0D, 0.0D, -2.0D), location.clone().add(2.0D, 0.0D, 1.0D), location.clone().add(2.0D, 0.0D, -1.0D), location.clone().add(-2.0D, 0.0D, 1.0D), location.clone().add(-2.0D, 0.0D, -1.0D), location.clone().add(1.0D, 0.0D, 2.0D), location.clone().add(-1.0D, 0.0D, -2.0D), location.clone().add(1.0D, 0.0D, -2.0D), location.clone().add(-1.0D, 0.0D, 2.0D)};
+        Location[] var8 = uppers;
+        int var7 = uppers.length;
+
+        for(int var15 = 0; var15 < var7; ++var15) {
+          Location upper = var8[var15];
           upper.getBlock().setType(Material.GLASS);
         }
       }
-      location.add(0, 1, 0);
-      downs = new Location[] {location, location.clone().add(1, 0, 0), location.clone().add(-1, 0, 0), location.clone().add(0, 0, 1), location.clone().add(0, 0, -1),
-          location.clone().add(1, 0, 1), location.clone().add(-1, 0, 1), location.clone().add(1, 0, -1), location.clone().add(-1, 0, -1)};
-      for (Location down : downs) {
+
+      location.add(0.0D, 1.0D, 0.0D);
+      downs = new Location[]{location, location.clone().add(1.0D, 0.0D, 0.0D), location.clone().add(-1.0D, 0.0D, 0.0D), location.clone().add(0.0D, 0.0D, 1.0D), location.clone().add(0.0D, 0.0D, -1.0D), location.clone().add(1.0D, 0.0D, 1.0D), location.clone().add(-1.0D, 0.0D, 1.0D), location.clone().add(1.0D, 0.0D, -1.0D), location.clone().add(-1.0D, 0.0D, -1.0D)};
+      var14 = downs;
+      var5 = downs.length;
+
+      for(var11 = 0; var11 < var5; ++var11) {
+        down = var14[var11];
         down.getBlock().setType(Material.GLASS);
       }
 
-      return;
-    }
-
-    for (double y = 0; y <= 4; y++) {
-      for (double x = -1; x <= 1; x++) {
-        for (double z = -1; z <= 1; z++) {
-          if (y > 0 && y < 4) {
-            if (x > -1 && z < 1) {
-              continue;
+    } else {
+      for(double y = 0.0D; y <= 4.0D; ++y) {
+        for(double x = -1.0D; x <= 1.0D; ++x) {
+          for(double z = -1.0D; z <= 1.0D; ++z) {
+            if (y <= 0.0D || y >= 4.0D || x != 0.0D || z != 0.0D) {
+              location.clone().add(x, y, z).getBlock().setType(Material.GLASS);
             }
           }
-
-          location.clone().add(x, y, z).getBlock().setType(Material.GLASS);
         }
       }
+
     }
   }
 
   public static void remove(Location location, boolean big) {
     if (big) {
-      location.add(0, -1, 0);
-      Location[] downs = {location, location.clone().add(1, 0, 0), location.clone().add(-1, 0, 0), location.clone().add(0, 0, 1), location.clone().add(0, 0, -1),
-          location.clone().add(1, 0, 1), location.clone().add(-1, 0, 1), location.clone().add(1, 0, -1), location.clone().add(-1, 0, -1)};
-      for (Location down : downs) {
+      location.add(0.0D, -1.0D, 0.0D);
+      Location[] downs = new Location[]{location, location.clone().add(1.0D, 0.0D, 0.0D), location.clone().add(-1.0D, 0.0D, 0.0D), location.clone().add(0.0D, 0.0D, 1.0D), location.clone().add(0.0D, 0.0D, -1.0D), location.clone().add(1.0D, 0.0D, 1.0D), location.clone().add(-1.0D, 0.0D, 1.0D), location.clone().add(1.0D, 0.0D, -1.0D), location.clone().add(-1.0D, 0.0D, -1.0D)};
+      Location[] var14 = downs;
+      int var5 = downs.length;
+
+      Location down;
+      int var11;
+      for(var11 = 0; var11 < var5; ++var11) {
+        down = var14[var11];
         down.getBlock().setType(Material.AIR);
       }
-      for (int i = 1; i < 4; i++) {
-        location.add(0, 1, 0);
-        Location[] uppers = {location.clone().add(2, 0, 0), location.clone().add(-2, 0, 0), location.clone().add(0, 0, 2), location.clone().add(0, 0, -2),
-            location.clone().add(2, 0, 1), location.clone().add(2, 0, -1), location.clone().add(-2, 0, 1), location.clone().add(-2, 0, -1), location.clone().add(1, 0, 2),
-            location.clone().add(-1, 0, -2), location.clone().add(1, 0, -2), location.clone().add(-1, 0, 2)};
-        for (Location upper : uppers) {
+
+      for(int i = 1; i < 4; ++i) {
+        location.add(0.0D, 1.0D, 0.0D);
+        Location[] uppers = new Location[]{location.clone().add(2.0D, 0.0D, 0.0D), location.clone().add(-2.0D, 0.0D, 0.0D), location.clone().add(0.0D, 0.0D, 2.0D), location.clone().add(0.0D, 0.0D, -2.0D), location.clone().add(2.0D, 0.0D, 1.0D), location.clone().add(2.0D, 0.0D, -1.0D), location.clone().add(-2.0D, 0.0D, 1.0D), location.clone().add(-2.0D, 0.0D, -1.0D), location.clone().add(1.0D, 0.0D, 2.0D), location.clone().add(-1.0D, 0.0D, -2.0D), location.clone().add(1.0D, 0.0D, -2.0D), location.clone().add(-1.0D, 0.0D, 2.0D)};
+        Location[] var8 = uppers;
+        int var7 = uppers.length;
+
+        for(int var15 = 0; var15 < var7; ++var15) {
+          Location upper = var8[var15];
           upper.getBlock().setType(Material.AIR);
         }
       }
-      location.add(0, 1, 0);
-      downs = new Location[] {location, location.clone().add(1, 0, 0), location.clone().add(-1, 0, 0), location.clone().add(0, 0, 1), location.clone().add(0, 0, -1),
-          location.clone().add(1, 0, 1), location.clone().add(-1, 0, 1), location.clone().add(1, 0, -1), location.clone().add(-1, 0, -1)};
-      for (Location down : downs) {
+
+      location.add(0.0D, 1.0D, 0.0D);
+      downs = new Location[]{location, location.clone().add(1.0D, 0.0D, 0.0D), location.clone().add(-1.0D, 0.0D, 0.0D), location.clone().add(0.0D, 0.0D, 1.0D), location.clone().add(0.0D, 0.0D, -1.0D), location.clone().add(1.0D, 0.0D, 1.0D), location.clone().add(-1.0D, 0.0D, 1.0D), location.clone().add(1.0D, 0.0D, -1.0D), location.clone().add(-1.0D, 0.0D, -1.0D)};
+      var14 = downs;
+      var5 = downs.length;
+
+      for(var11 = 0; var11 < var5; ++var11) {
+        down = var14[var11];
         down.getBlock().setType(Material.AIR);
       }
 
-      return;
-    }
-
-    for (double y = 0; y <= 4; y++) {
-      for (double x = -1; x <= 1; x++) {
-        for (double z = -1; z <= 1; z++) {
-          if (y > 0 && y < 4) {
-            if (x == 0 && z == 0) {
-              continue;
+    } else {
+      for(double y = 0.0D; y <= 4.0D; ++y) {
+        for(double x = -1.0D; x <= 1.0D; ++x) {
+          for(double z = -1.0D; z <= 1.0D; ++z) {
+            if (y <= 0.0D || y >= 4.0D || x != 0.0D || z != 0.0D) {
+              location.clone().add(x, y, z).getBlock().setType(Material.AIR);
             }
           }
-
-          location.clone().add(x, y, z).getBlock().setType(Material.AIR);
         }
       }
+
     }
   }
 }

@@ -54,8 +54,11 @@ public class VirtualTeam {
   }
 
   public void setValue(String text) {
+    // Add logging to capture the value being set
+
+    // Truncate the value if it exceeds 32 characters
     if (text.length() > 32) {
-      throw new IllegalArgumentException("Value too Long! Max of 32 characteres, the value has " + text.length() + " !");
+      text = text.substring(0, 32);
     }
 
     text = StringUtils.translateAlternateColorCodes('&', text);
@@ -68,7 +71,7 @@ public class VirtualTeam {
     } else {
       text = text.substring(Math.min(text.length(), prefix.length()));
     }
-    
+
     this.suffix = ChatColor.getLastColors(prefix) + text;
     this.suffix = this.suffix.substring(0, Math.min(16, this.suffix.length()));
     if (this.suffix.endsWith("§")) {

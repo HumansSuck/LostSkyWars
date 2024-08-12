@@ -39,7 +39,7 @@ public class SkyWarsChest {
   private WorldServer<?> server;
   private String serialized;
   private String chestType;
-  
+
   private Hologram hologram = null;
 
   public SkyWarsChest(WorldServer<?> server, String serialized) {
@@ -47,40 +47,40 @@ public class SkyWarsChest {
     this.serialized = serialized;
     this.chestType = serialized.split("; ")[6];
   }
-  
+
   public void update() {
     if (this.server.getType().equals(SkyWarsType.DUELS)) {
       return;
     }
-    
+
     if (this.hologram != null) {
       Block block = this.getLocation().getBlock();
       if (!(block.getState() instanceof Chest)) {
         this.destroy();
         return;
       }
-      
+
       NMS.playChestAction(this.getLocation(), true);
       this.hologram.updateLine(1, Language.game$hologram$chest.replace("{time}", new SimpleDateFormat("mm:ss").format((server.getTimer() - server.getEventTime(true)) * 1000)));
     }
   }
-  
+
   public void createHologram() {
     if (this.server.getType().equals(SkyWarsType.DUELS)) {
       return;
     }
-    
+
     if (this.hologram == null) {
       this.hologram = Holograms.createHologram(this.getLocation().add(0.5, -0.5, 0.5));
       this.hologram.withLine(Language.game$hologram$chest.replace("{time}", new SimpleDateFormat("mm:ss").format((server.getTimer() - server.getEventTime(true)) * 1000)));
     }
   }
-  
+
   public void destroy() {
     if (this.server.getType().equals(SkyWarsType.DUELS)) {
       return;
     }
-    
+
     if (this.hologram != null) {
       NMS.playChestAction(this.getLocation(), false);
       Holograms.removeHologram(this.hologram);
@@ -132,11 +132,15 @@ public class SkyWarsChest {
     private String name;
     private List<ChestItem> refill;
     private List<ChestItem> content;
+    private int minItems;
+    private int maxItems;
 
-    public ChestType(String name, List<ChestItem> refill, List<ChestItem> content) {
+    public ChestType(String name, List<ChestItem> refill, List<ChestItem> content, int minItems, int maxItems) {
       this.name = name;
       this.refill = refill;
       this.content = content;
+      this.minItems = minItems;
+      this.maxItems = maxItems;
     }
 
     public void fill(Location location, boolean refill) {
@@ -146,16 +150,24 @@ public class SkyWarsChest {
 
         Inventory inventory = chest.getInventory();
         inventory.clear();
-        int index = 0;
+        int itemCount = RANDOM.nextInt(minItems, maxItems + 1);
         Collections.shuffle(SLOTS);
-        for (ChestItem item : refill ? this.refill : this.content) {
-          if (index >= 27) {
-            break;
-          }
+        int index = 0;
 
+        List<ItemStack> itemsToPlace = new ArrayList<>();
+        for (ChestItem item : refill ? this.refill : this.content) {
           ItemStack apply = item.get();
           if (apply != null) {
-            inventory.setItem(SLOTS.get(index++), apply);
+            itemsToPlace.add(apply);
+          }
+        }
+
+        Collections.shuffle(itemsToPlace);
+
+        while (index < itemCount && !itemsToPlace.isEmpty()) {
+          ItemStack itemToPlace = itemsToPlace.remove(0);
+          if (itemToPlace != null) {
+            inventory.setItem(SLOTS.get(index++), itemToPlace);
           }
         }
       }
@@ -196,7 +208,10 @@ public class SkyWarsChest {
         items.clear();
         items = null;
 
-        types.put(name.toLowerCase(), new ChestType(name.toLowerCase(), ritems, citems));
+        int minItems = cu.getInt(key + ".minItems", 1); // Default min items to 1 if not specified
+        int maxItems = cu.getInt(key + ".maxItems", 27); // Default max items to 27 if not specified
+
+        types.put(name.toLowerCase(), new ChestType(name.toLowerCase(), ritems, citems, minItems, maxItems));
       }
 
       LOGGER.log(LostLevel.INFO, "Loaded " + types.size() + " chesttypes!");
@@ -229,7 +244,6 @@ public class SkyWarsChest {
       if (RANDOM.nextInt(100) + 1 <= percentage) {
         return item;
       }
-
       return null;
     }
   }

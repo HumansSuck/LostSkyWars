@@ -1,7 +1,10 @@
 package tk.kanaostore.losteddev.skywars.listeners.entity;
 
+import org.bukkit.ChatColor;
+import tk.kanaostore.losteddev.skywars.utils.LostLogger;
 import org.bukkit.Effect;
 import org.bukkit.Material;
+import org.bukkit.entity.Arrow;
 import org.bukkit.entity.FishHook;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Projectile;
@@ -16,6 +19,7 @@ import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.util.Vector;
+import tk.kanaostore.losteddev.skywars.Main;
 import tk.kanaostore.losteddev.skywars.api.server.SkyWarsServer;
 import tk.kanaostore.losteddev.skywars.api.server.SkyWarsState;
 import tk.kanaostore.losteddev.skywars.api.server.SkyWarsTeam;
@@ -25,8 +29,12 @@ import tk.kanaostore.losteddev.skywars.database.Database;
 import tk.kanaostore.losteddev.skywars.player.Account;
 import tk.kanaostore.losteddev.skywars.utils.MinecraftVersion;
 
+import java.util.logging.Logger;
+
 @SuppressWarnings("deprecation")
 public class EntityListener implements Listener {
+
+  public static final LostLogger LOGGER = new LostLogger();
 
   @EventHandler
   public void onPlayerFish(ProjectileHitEvent evt) {
@@ -48,7 +56,7 @@ public class EntityListener implements Listener {
           damaged = (Player) evt.getHitEntity();
           account2 = Database.getInstance().getAccount(damaged.getUniqueId());
           if (account2 == null || account2.getServer() == null || !account2.getServer().equals(server) || server.isSpectator(damaged) || (team != null && team.hasMember(damaged))
-              || damaged.equals(player)) {
+                  || damaged.equals(player)) {
             return;
           }
 
@@ -91,8 +99,7 @@ public class EntityListener implements Listener {
       if (evt.getDamager() instanceof Player) {
         damager = (Player) evt.getDamager();
         account2 = Database.getInstance().getAccount(damager.getUniqueId());
-        if (account2 == null || account2.getServer() == null || !account2.getServer().equals(server) || server.isSpectator(damager) || (team != null && team.hasMember(damager))
-            || damager.equals(player)) {
+        if (account2 == null || account2.getServer() == null || !account2.getServer().equals(server) || server.isSpectator(damager) || (team != null && team.hasMember(damager))) {
           evt.setCancelled(true);
           return;
         }
@@ -103,6 +110,7 @@ public class EntityListener implements Listener {
         if (account2.canSeeBlood()) {
           damager.playEffect(player.getLocation(), Effect.STEP_SOUND, Material.REDSTONE_BLOCK);
         }
+
       }
 
       if (evt.getDamager() instanceof Projectile) {
@@ -110,12 +118,16 @@ public class EntityListener implements Listener {
           evt.setDamage(0.001D);
         }
 
+      if ((player.getHealth() - evt.getDamage()) <= 0.0 && SkyWarsPerk.isDecisiveStrike(player, server.getType().getIndex())) {
+          evt.setDamage(player.getHealth() - 0.5);
+          return;
+        }
+
         Projectile proj = (Projectile) evt.getDamager();
-        if (proj.getShooter() instanceof Player) {
+        if (proj instanceof Arrow && proj.getShooter() instanceof Player) {
           damager = (Player) proj.getShooter();
           account2 = Database.getInstance().getAccount(damager.getUniqueId());
-          if (account2 == null || account2.getServer() == null || !account2.getServer().equals(server) || server.isSpectator(damager) || (team != null && team.hasMember(damager))
-              || damager.equals(player)) {
+          if (account2 == null || account2.getServer() == null || !account2.getServer().equals(server) || server.isSpectator(damager)) {
             evt.setCancelled(true);
             return;
           }
@@ -126,17 +138,19 @@ public class EntityListener implements Listener {
           if (account2.canSeeBlood()) {
             damager.playEffect(player.getLocation(), Effect.STEP_SOUND, Material.REDSTONE_BLOCK);
           }
+
+          double damageDealt = evt.getDamage();
+          double healthRemaining = player.getHealth() - damageDealt;
+          String name = player.getName();
+          damager.sendMessage(ChatColor.RED + "⚔ Dealt: " + damageDealt);
+          damager.sendMessage(ChatColor.RED + name + " is at ❤: " + healthRemaining);
         }
       }
 
       if (damager != null) {
         account.setHit(damager.getUniqueId());
       }
-      
-      if ((player.getHealth() - evt.getDamage()) <= 0.0 && SkyWarsPerk.isDecisiveStrike(player, server.getType().getIndex())) {
-        evt.setDamage(player.getHealth() - 0.5);
-        return;
-      }
+
     }
   }
 
@@ -181,9 +195,9 @@ public class EntityListener implements Listener {
       if (account != null) {
         SkyWarsServer server = account.getServer();
         if (server != null) {
-          evt.setCancelled(server.getState() != SkyWarsState.INGAME);
+          evt.setCancelled(server.getState() != SkyWarsState.STARTING);
           if (!evt.isCancelled()) {
-            account.getPlayer().setSaturation(5.0f);
+            account.getPlayer().setSaturation(20.0f);
           }
         }
       }

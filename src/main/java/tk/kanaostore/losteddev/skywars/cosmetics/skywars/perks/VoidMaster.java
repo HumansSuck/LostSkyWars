@@ -34,10 +34,8 @@ public class VoidMaster extends SkyWarsPerk {
   @EventHandler
   public void onPlayerDeath(SkyWarsPlayerDeathEvent evt) {
     if (evt.isKilled() && isAbleToUse(evt.getKiller())) {
-      if (evt.getCause() == SkyWarsDeathCause.KILLED_VOID) {
         if (ThreadLocalRandom.current().nextInt(100) < percentage) {
           evt.getKiller().getInventory().addItem(BukkitUtils.deserializeItemStack("ENDER_PEARL : 1"));
-        }
       }
     }
   }
